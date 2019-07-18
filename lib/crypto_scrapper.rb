@@ -8,19 +8,27 @@ page = Nokogiri::HTML(open("https://coinmarketcap.com/all/views/all/"))
 
 
 name_crypto=[]
-page.xpath("//body//tbody//tr//td//span//a").each do |node|
+page.xpath("//body//tbody//tr//td//span").each do |node|
 	name_crypto << node.text
 end
 
 money=[]
-page.xpath("a//price").each do |node|
+page.xpath("//td[5]/a").each do |node|
 	money << node.text
 end
 
 	for i in 0..name_crypto.length-1
+		
 		hash=name_crypto[i]
 		hash2=money[i]
-		print "#{hash} => #{hash2} "
+		puts "#{hash}"
+	end
+
+	for k in 0..money.length-1
+		
+		hash2=money[i]
+
+		print "#{hash2}"
 		puts
 	end
 
