@@ -1,1 +1,10 @@
 README
+
+Salut, pour le programme crypto_scrapper j'ai juste récupérer la valeur de la crypto ainsi que son noms et la boucle for et seulement la pour l'affiché
+
+Pour le programme mairie chrismas j'ai crée 3 methodes:
+La 1er pour récupérer l'adresse mail par rapport a l'url choisi
+La 2eme récuperé les noms des communes du Val d'Oise
+La 3eme récupéré l'url du Val d'Oise ainsi que lui rajouté derriere son URL le nom de la commune pour avoir URL des commune du Val d'Oise
+
+et la boucle for et presente pour l'affichage

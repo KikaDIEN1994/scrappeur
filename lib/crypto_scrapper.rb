@@ -3,20 +3,23 @@ require 'rubygems'
 require 'nokogiri'  
 require 'open-uri'
 
+#url de la page
 page = Nokogiri::HTML(open("https://coinmarketcap.com/all/views/all/"))   
 #puts page.class   # => Nokogiri::HTML::Document
 
-
+#récupere le noms de la cryto
 name_crypto=[]
 page.xpath("//body//tbody//tr//td//span").each do |node|
 	name_crypto << node.text
 end
 
+# recupere la valeur de money
 money=[]
 page.xpath("//td[5]/a").each do |node|
 	money << node.text
 end
 
+#tableau d'affichage
 	for i in 0..name_crypto.length-1
 		
 		hash=name_crypto[i]
